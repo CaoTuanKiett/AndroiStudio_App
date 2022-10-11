@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="400dp"
+    android:minHeight="500dp"
+    android:gravity="center">
+    <TextView
+        android:textColor="#3A1212"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:text="ĐĂNG KÝ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:textSize="20dp"
+        android:textColorHint="#000"
+        android:textColor="#000000"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:hint="Nhập tên tài khoảnnn ..."
+        android:id="@+id/edttk"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:textSize="20dp"
+        android:textColorHint="#000"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:hint="Passwordd ..."
+        android:id="@+id/edtmk"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonhuy"
+            android:layout_width="102dp"
+            android:layout_height="58dp"
+            android:layout_marginRight="30dp"
+            android:text="HỦY" />
+
+        <Button
+            android:id="@+id/buttondongy"
+            android:layout_width="102dp"
+            android:layout_height="58dp"
+            android:text="ĐỒNG Ý" />
+    </LinearLayout>
+</LinearLayout>

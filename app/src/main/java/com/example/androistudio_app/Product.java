@@ -5,33 +5,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
-public class Profile extends AppCompatActivity {
+public class Product extends AppCompatActivity {
 
-    private Button button;
-    private ImageView imageView;
-    private ImageView imgView;
+    private ImageView imgBackListItem, imgOpenProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_product);
 
-        imgView = (ImageView) findViewById(R.id.imgBackList);
-        imgView.setOnClickListener(new View.OnClickListener() {
+        imgBackListItem = (ImageView) findViewById(R.id.imgBackListItem);
+        imgBackListItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openListItem();
+                    openListItem();
             }
         });
 
-        imageView = (ImageView) findViewById(R.id.ImgTurn);
-        imageView.setOnClickListener(new View.OnClickListener() {
+        imgOpenProfile = (ImageView) findViewById(R.id.imgOpenProfile);
+        imgOpenProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                turnMain();
+                    openProfile();
             }
         });
     }
@@ -41,8 +38,8 @@ public class Profile extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void turnMain() {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void openProfile(){
+        Intent intent = new Intent(this, Profile.class );
         startActivity(intent);
     }
 }

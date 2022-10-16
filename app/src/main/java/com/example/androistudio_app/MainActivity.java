@@ -11,6 +11,7 @@ import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText edtuser, edtpassword;
     Button btndangnhap, btndangky, btnthoat;
     String ten,mk;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,32 +27,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Anhxa();
         ControlButton();
+
+        imageView = (ImageView) findViewById(R.id.imgLogin);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logMain();
+            }
+        });
+    }
+
+    public void logMain() {
+        Intent intent = new Intent(this, ListItem.class);
+        startActivity(intent);
     }
 
     private void ControlButton() {
-        btnthoat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, android.R.style.Theme_DeviceDefault_Light_Dialog);
-                builder.setMessage("Bạn muốn thoát ????");
-                builder.setIcon(android.R.drawable.ic_dialog_alert);
-
-                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        onBackPressed();
-                    }
-                });
-
-                builder.setPositiveButton("Không", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
 
         btndangky.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
         edtpassword = (EditText) findViewById(R.id.edittextpassword);
         btndangnhap = (Button) findViewById(R.id.buttondangnhap);
         btndangky = (Button) findViewById(R.id.buttondangky);
-        btnthoat = (Button) findViewById(R.id.buttonthoat);
     }
 
 }

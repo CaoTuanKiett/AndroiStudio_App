@@ -4,11 +4,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="400dp"
-    android:minHeight="500dp"
+    android:minWidth="450dp"
+    android:minHeight="550dp"
+    android:background="@drawable/back7"
     android:gravity="center">
+
     <TextView
-        android:textColor="#3A1212"
+        android:layout_marginTop="150dp"
+        android:textColor="#FFFFFF"
         android:gravity="center"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -17,6 +20,8 @@
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:padding="10dp"
+        android:background="#93C9CC"
         android:textSize="20dp"
         android:textColorHint="#000"
         android:textColor="#000000"
@@ -29,6 +34,8 @@
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:padding="10dp"
+        android:background="#93C9CC"
         android:textSize="20dp"
         android:textColorHint="#000"
         android:layout_marginRight="30dp"
@@ -47,16 +54,31 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:background="#64BC18"
             android:id="@+id/buttonhuy"
             android:layout_width="102dp"
-            android:layout_height="58dp"
-            android:layout_marginRight="30dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="40dp"
             android:text="HỦY" />
 
         <Button
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:background="#64BC18"
             android:id="@+id/buttondongy"
             android:layout_width="102dp"
-            android:layout_height="58dp"
+            android:layout_height="48dp"
             android:text="ĐỒNG Ý" />
     </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:textColor="#fff"
+        android:text="Trợ giúp !!!!"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
